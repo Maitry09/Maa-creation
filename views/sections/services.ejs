@@ -32,6 +32,7 @@
                             <button class="btn btn-secondary btn-3d" style="padding: bottom 2px;">click to see service</button>
                         </div>
                         <div class="card-back">
+                            <span><h5 class="service-title"><%= service.icon %>&nbsp;<%= service.title %></h5></span>
                             <ul class="service-features">
                                 <% service.features.forEach(feature => { %>
                                     <li>
