@@ -1,0 +1,50 @@
+body {
+  background-color: #0d0d0d;
+  font-family: 'Outfit', sans-serif;
+  color: #fff;
+  margin: 0;
+}
+.gallery-section {
+  margin: 75px 0px;
+}
+.category-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, #f0f, #0ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.image-grid {
+  display: grid;
+  margin: 0 9px ;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  grid-auto-flow: dense;
+}
+
+.image-card.wide {
+  grid-column: span 2; 
+}
+.image-card.tall {
+  grid-row: span 2;   
+}
+
+.image-card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-card:hover {
+  transform: scale(1.01);
+}

@@ -1,0 +1,63 @@
+<section id=features class=features>
+    <div class="section-3d-bg">
+        <div class="grid-lines">
+            <div class="grid-line horizontal"></div>
+            <div class="grid-line vertical"></div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="section-header" data-scroll-reveal>
+            <h2 class="section-title gradient-text-3d" data-text-reveal>Our Services</h2>
+            <p class="section-subtitle" data-fade-up>
+                We offer comprehensive photography and videography services tailored to your needs
+            </p>
+        </div>
+        
+        <div class="services-grid">
+            <% services.forEach((service, index) => { %>
+                <div class="service-card-3d"  data-scroll-reveal data-delay="<%= index * 20 %>">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="service-icon-3d">
+                                <div class="icon-3d-container">
+                                    <span><%= service.icon %></span>
+                                    <div class="icon-shadow"></div>
+                                </div>
+                            </div>
+                            <h3 class="service-title"><%= service.title %></h3>
+                            <p class="service-description">
+                                <%= service.subtitle %>
+                            </p>
+                            <button class="btn btn-secondary btn-3d" style="padding: bottom 2px;">click to see service</button>
+                        </div>
+                        <div class="card-back">
+                            <ul class="service-features">
+                                <% service.features.forEach(feature => { %>
+                                    <li>
+                                        <span class="feature-dot-3d"></span>
+                                        <%= feature %>
+                                    </li>
+                                <% }) %>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</section>
+<script>
+    for(const card of document.querySelectorAll('.service-card-3d')) {
+    const inner = card.querySelector('.card-inner');
+    const btn = card.querySelector('.btn-3d');
+
+    btn.addEventListener('click', () => {
+        inner.style.transform = 'rotateY(180deg)';
+    });
+
+    card.addEventListener('mouseleave', () => {
+        inner.style.transform = 'rotateY(0deg)';
+    });
+};
+</script>

@@ -1,0 +1,53 @@
+<% layout('boilerplate') -%>
+   <section class="pricing-section">
+    <h1 class="pricing-section-title">Wedding Packages & Pricing</h1>
+
+    <div class="packages-grid">
+      <% for (const pack of packages) { %>
+        <div class="card">
+          <h2 class="card-title"><%= pack.title %></h2>
+
+          <div class="card-section">
+            <h3>Includes:</h3>
+            <ul>
+              <% for (const item of pack.includes) { %>
+                <li><%= item %></li>
+              <% } %>
+            </ul>
+          </div>
+
+          <div class="card-section">
+            <h3>Deliverables:</h3>
+            <ul>
+              <% for (const item of pack.deliverables) { %>
+                <li><%= item %></li>
+              <% } %>
+            </ul>
+          </div>
+
+          <% if (pack.gifts) { %>
+            <div class="card-section">
+              <h3>Gift Items:</h3>
+              <ul>
+                <% for (const gift of pack.gifts) { %>
+                  <li><%= gift %></li>
+                <% } %>
+              </ul>
+            </div>
+          <% } %>
+
+          <p class="price">💰 <%= pack.price %></p>
+          <% if (pack.extra) { %>
+            <p class="extra">Extra: <%= pack.extra %></p>
+          <% } %>
+        </div>
+      <% } %>
+    </div>
+    <br>
+    <div class="card">
+      <h3 class="card-title">And Many More...</h3>
+      <div class="card-section" ><h3>Want Customized Package ?</h3></div>
+      <p class="card-section">We understand that every wedding is unique. If our packages don't fit your needs, we can create a custom package just for you.</p>
+      <p class="price">💰 Contact us for a quote</p>
+    </div>
+  </div>

@@ -1,0 +1,115 @@
+/* Hero Section 3D */
+.hero {
+  margin-top: 0.7%;
+  padding: 40px 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(ellipse at top, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+    linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #000000 100%);
+}
+
+.hero-3d-scene {
+  position: absolute;
+  inset: 0;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.particles-3d {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.particle-3d {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: radial-gradient(circle, #60a5fa, transparent);
+  border-radius: 50%;
+  animation: particleFloat3D 6s ease-in-out infinite;
+}
+
+@keyframes particleFloat3D {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0) rotateZ(0deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-50px) translateX(20px) rotateZ(180deg);
+    opacity: 1;
+  }
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+  z-index: 10;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.icon-container {
+  position: relative;
+  perspective: 1000px;
+  display: inline-block;
+  transform-style: preserve-3d;
+}
+
+.logo-main {
+  margin-top: 25px;
+  width:10rem;
+  position: relative;
+  display:flex;
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 70px;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-top: 15px;
+  margin-bottom: 24px;
+  perspective: 1000px;
+}
+
+.title-line {
+  display: block;
+  transform-style: preserve-3d;
+  animation: titleReveal 1s ease-out forwards;
+  opacity: 0;
+  transform: translateY(50px) rotateX(-15deg);
+}
+
+.title-line:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+@keyframes titleReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg);
+  }
+}
+
+.hero-subtitle {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  color: #d1d5db;
+  margin-bottom: 35px;
+  opacity: 0.9;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+

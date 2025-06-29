@@ -1,0 +1,11 @@
+<% layout('boilerplate') -%>
+<section class="gallery-section">
+    <h1 class="category-title"><%= category.charAt(0).toUpperCase() + category.slice(1) %> Gallery</h1>
+    <div class="image-grid">
+       <% for (const img of images) { %>
+        <div class="image-card">
+          <img src="<%= img %>" loading="lazy" alt="<%= category.charAt(0).toUpperCase() + category.slice(1) %> Image" />
+        </div>
+      <% } %>
+    </div>
+</section>

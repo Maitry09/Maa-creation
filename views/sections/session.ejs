@@ -1,0 +1,71 @@
+<% layout('boilerplate') -%>
+<section class="session"> 
+    <div class="bg-icon"></div>
+    <div class="booking-container">
+    <h1><span class=icon >📅</span>Book Your Photography Session</h1>
+    <form class="booking-form" id="contactForm" action="/session" method="POST">
+        <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input required type="text" id="name" name="name" />
+        </div>
+
+        <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input required type="tel" id="phone" name="phone" />
+        </div>
+
+        <div class="form-group">
+        <label for="email">Email:</label>
+        <input required type="email" id="email" name="email" />
+        </div>
+
+        <div class="form-group">
+        <label for="event">Event Type:</label>
+        <select id="event" name="event">
+            <option value="wedding">Wedding</option>
+            <option value="engagement">Engagement</option>
+            <option value="prewedding">Pre-Wedding</option>
+            <option value="birthday">Birthday</option>
+            <option value="corporate">Corporate</option>
+            <option value="family">Family</option>
+            <option value="fashion">Fashion</option>
+            <option value="product">Product</option>
+            <option value="travel">Travel</option>
+            <option value="event">Event</option>
+            <option value="graduation">Graduation</option>
+            <option value="maternity">Maternity</option>
+            <option value="pet">Pet</option>
+            <option value="concert">Concert</option>
+            <option value="sports">Sports</option>
+            <option value="food">Food</option>
+            <option value="art">Art</option>
+            <option value="other">Other</option>
+        </select>
+        </div>
+
+        <div class="form-group">
+        <label for="date">Preferred Date:</label>
+        <input required type="date" id="date" name="date" />
+        </div>
+
+        <div class="form-group">
+        <label for="message">Additional Details:</label>
+        <textarea id="message" name="message" rows="4" placeholder="Tell us more..."></textarea>
+        </div>
+
+        <button type="submit">Book Now</button>
+    </form>
+      <div id="formFeedback" class="formFeedback hide"></div>
+    </div>
+</section>
+<script>
+  const dateInput = document.getElementById('date');
+  const today = new Date();
+  const yyyy = today.getFullYear();
+  const mm = String(today.getMonth() + 1).padStart(2, '0'); // Months start at 0
+  const dd = String(today.getDate()).padStart(2, '0');
+  const minDate = `${yyyy}-${mm}-${dd}`;
+
+  dateInput.min = minDate;
+</script>
+<script src="/js/contact.js"></script>

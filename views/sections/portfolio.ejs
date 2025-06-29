@@ -1,0 +1,52 @@
+<% layout('boilerplate') -%>
+<section id="portfolio" class="portfolio">
+    <div class="section-3d-bg">
+        <div class="floating-orbs-3d">
+            <div class="orb-3d orb-1"></div>
+            <div class="orb-3d orb-2"></div>
+            <div class="orb-3d orb-3"></div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="section-header" data-scroll-reveal>
+            <h2 class="section-title gradient-text-3d" data-text-reveal>Our Portfolio</h2>
+            <p class="section-subtitle" data-fade-up>
+                Explore our recent work and see the quality and creativity we bring to every project
+            </p>
+            
+            <div class="portfolio-filters" data-stagger-reveal>
+                <% portfolio.categories.forEach((category, index) => { %>
+                    <button class="filter-btn-3d <%= index === 0 ? 'active' : '' %>" 
+                            data-filter="<%= category.toLowerCase() %>">
+                        <b><%= category %></b>
+                    </button>
+                <% }) %>
+            </div>
+        </div>
+        
+    <div class="portfolio-grid-3d" id="portfolioGrid">
+    <% for (const item of portfolio.items) { %>
+        <div class="portfolio-item-3d" data-category="<%= item.category %>" data-scroll-reveal>
+            <div class="portfolio-card">
+                <div class="image-container-3d">
+                    <img src="<%= item.image %>" alt="<%= item.title %>">
+                    <div class="image-overlay-3d">
+                        <div class="overlay-content">
+                            <a href="/category/<%= item.category %>" target="_blank" class="btn btn-secondary btn-3d">View Details</a>
+                        </div>
+                    </div>
+                    <div class="image-frame"></div>
+                </div>
+                <div class="portfolio-info-3d">
+                    <h3 class="portfolio-title"><%= item.title %></h3>
+                    <span class="portfolio-category-3d">
+                        <%= item.category.charAt(0).toUpperCase() + item.category.slice(1) %>
+                    </span>
+                    <p class="portfolio-description"><%= item.description %></p>
+                </div>
+            </div>
+        </div>
+    <% } %>
+</div>
+</section>

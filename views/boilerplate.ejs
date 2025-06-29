@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=icon href="home/icon" type="image/png" />
+    <title>Maa Creation</title>
+    <meta name="description" content="Maa Creation - Explore our portfolio, services, and get in touch for your next memorable event.">
+    
+    
+    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/hero.css">
+    <link rel="stylesheet" href="/css/services.css">
+    <link rel="stylesheet" href="/css/portfolio.css">
+    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/pricing.css">
+    <link rel="stylesheet" href="/css/session.css">
+    <link rel="stylesheet" href="/css/reels.css">
+    <link rel="stylesheet" href="/css/category.css">
+    
+    <!-- Additional head content -->
+    <%- include('partials/head') %>
+</head>
+<body>    
+    
+    <!-- Loading Screen -->
+    <%- include('partials/loader') %>
+
+    <!-- Header -->
+    <%- include('partials/header') %>
+    
+    <!-- Main Content -->
+    <main>
+        <%- body %>
+    </main>
+    
+    <!-- Footer -->
+    <%- include('partials/footer') %>
+    
+     <!-- Scripts -->
+    <script src="/js/core.js"></script>
+    <script src="/js/portfolio.js"></script>
+    <script src="/js/animations.js"></script>
+    <script src="/js/category.js"></script>
+</body>
+</html>

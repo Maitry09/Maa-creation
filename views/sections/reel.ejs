@@ -1,0 +1,12 @@
+<% layout('boilerplate') -%>
+<section class="reels-section">
+  <div class="reels-scroll-wrapper">
+    <div class="reels-container" id="reelsContainer">
+      <% for (const reel of signedReels) { %>
+        <div class="reel-card">
+          <video src="<%= reel.src %>" type="video/mp4" width="360" controls autoplay muted loop playsinline ></video>
+        </div>
+      <% } %>
+    </div>
+  </div>
+</section>

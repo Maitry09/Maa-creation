@@ -1,0 +1,89 @@
+<% layout('boilerplate') -%>
+<section id="contact" class="contact">
+    <div class="section-3d-bg">
+        <div class="floating-diamond-3d">
+            <div class="diamond-3d"></div>
+        </div>
+        <div class="energy-field">
+            <div class="energy-ring ring-1"></div>
+            <div class="energy-ring ring-2"></div>
+            <div class="energy-ring ring-3"></div>
+        </div>
+    </div>
+    <div id="formFeedback" class="form-feedback"></div>
+    <div class="container">
+        <div class="section-header" data-scroll-reveal>
+            <h2 class="title section-title gradient-text-3d" data-text-reveal><%= contact.title %></h2>
+            <p class="section-subtitle" data-fade-up>
+                <%= contact.description %>
+            </p>
+        </div>
+        <form id="contactForm" action="/contact" method="POST">
+        <div class="contact-content-3d">
+            <div class="contact-form-container-3d" data-scroll-reveal>
+                <div class="contact-form-card-3d">
+                    <h3 class="form-title">Send us a message</h3>
+                    <form class="contact-form-3d">
+                        <div class="form-row">
+                            <div class="form-group-3d">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required>
+                                <div class="input-glow"></div>
+                            </div>
+                            <div class="form-group-3d">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                                <div class="input-glow"></div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group-3d">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required>
+                                <div class="input-glow"></div>
+                            </div>
+                            <div class="form-group-3d">
+                                <label for="service">Service Interested In(Optional)</label>
+                                <input type="text" id="service" name="service" placeholder="Wedding, Portrait, Commercial, etc.">
+                                <div class="input-glow"></div>
+                            </div>
+                        </div>
+                        <div class="form-group-3d">
+                            <label for="message">Message(Optional)</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..." required></textarea>
+                            <div class="input-glow"></div>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-primary btn-large btn-full btn-3d">
+                            <span class="btn-text">Send Message</span>
+                            <div class="btn-bg"></div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            </form>
+            <div class="contact-info-3d" data-scroll-reveal data-delay="300">
+                <% contact.info.forEach((info, index) => { %>
+                    <div class="contact-card-3d" data-stagger-reveal data-delay="<%= index * 100 %>">
+                        <div class="contact-item-3d">
+                            <div class="contact-icon-3d">
+                                <i class="<%= info.icon %>"></i>
+                                <div class="icon-pulse"></div>
+                            </div>
+                            <div class="contact-details">
+                                <h4><%= info.title %></h4>
+                                <% info.content.forEach(line => { %>
+                                    <p><%= line %></p>
+                                <% }) %>
+                            </div>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+            
+            <div id="formFeedback" class="formFeedback hide"></div>
+        </div>
+    </div>
+</section>
+
+    <script src="/js/contact.js"></script>

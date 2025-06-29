@@ -1,0 +1,32 @@
+<section id="home" class="hero">
+    <div class="hero-3d-scene">        
+        <div class="particles-3d" id="particles3d"></div>
+    </div>
+    
+    <div class="hero-content" data-scroll-reveal>
+        <div class="icon-container">
+            <img class="logo-main" src="/data/icon2.png" alt="logo">
+        </div>
+        <h1 class="hero-title">
+            <span class="title-line"><%= hero.title %></span>
+            <span class="title-line gradient-text-3d"><%= hero.subtitle %></span>
+        </h1>
+        <p class="hero-subtitle" data-fade-up>
+            <%= hero.description %>
+        </p>
+        <div class="hero-buttons">
+            <% hero.buttons.forEach(button => { %>
+                <a href="<%= button.href %>" class="btn btn-<%= button.type %> btn-large btn-3d">
+                    <span class="btn-text">
+                        <% if (button.icon) { %>
+                            <i class="<%= button.icon %>"></i>
+                        <% } %>
+                        <%= button.text %>
+                    </span>
+                    <div class="btn-bg"></div>
+                </a>
+                </button>
+            <% }) %>
+        </div>
+    </div>
+</section>

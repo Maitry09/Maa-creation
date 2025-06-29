@@ -1,0 +1,24 @@
+{
+  "name": "photo-studio-website",
+  "version": "1.0.0",
+  "description": "A professional photo and videography studio website built using Express and EJS.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "cloudinary": "^2.7.0",
+    "dotenv": "^17.0.0",
+    "ejs": "^3.1.9",
+    "ejs-mate": "^4.0.0",
+    "express": "^4.21.2",
+    "fs": "^0.0.1-security",
+    "nodemailer": "^7.0.3",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "author": "Maitry Chauhan",
+  "license": "MIT"
+}
