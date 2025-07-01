@@ -1,11 +1,11 @@
 module.exports.service=[
     {
-        title: "Wedding/Engagement Photography",
+        title: "Wedding / Engagement Photography",
         icon: "💍",
         subtitle: "Capturing love, laughter, and happily ever after.",
         features: [
             "Full-day coverage", "Bridal & groom portraits", "Traditional & candid shots",
-            "Wedding album design", "Pre & post-wedding shoot","Family & guest coverage"
+            "Wedding album design", "Pre wedding shoot","Family & guest coverage"
         ]
     },
     {
@@ -78,9 +78,9 @@ module.exports.service=[
         subtitle: "Discovering the world, one click at a time.",
         icon: "✈️",
         features: [
-            "Location-based imagery", "Candid cultural captures", "Landscape & nature",
+            "Location-based imagery", "Candid cultural captures",
             , "Story-based photo essays",
-            "Couple/family travel photography","Drone coverage","Travel video reels",
+            "Couple/family travel photography","Drone coverage","Travel reels",
         ]
     },
     {
@@ -89,7 +89,7 @@ module.exports.service=[
         icon: "📹",
         features: [
             "Corporate interviews", "Office tours", "Testimonials",
-            "Conference highlights", "Brand story videos",
+             "Brand story videos",
             "Team portraits","Award & launch events",
         ]
     },
