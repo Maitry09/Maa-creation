@@ -4,8 +4,9 @@
     <div class="image-grid">
        <% for (const img of images) { %>
         <div class="image-card">
-          <img src="<%= img %>" loading="lazy" alt="<%= category.charAt(0).toUpperCase() + category.slice(1) %> Image" />
+          <img loading="lazy" src="<%= img %>" loading="lazy" alt="<%= category.charAt(0).toUpperCase() + category.slice(1) %> Image" />
         </div>
       <% } %>
     </div>
+    <button onclick="scrollToTop()" id="backToTop">↑ Top</button>
 </section>

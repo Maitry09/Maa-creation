@@ -200,6 +200,15 @@
     font-size: 1rem;
     padding: 10px;
   }
+
+  .nav-mobile{
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-link {
+    margin-top: 10px;
+    padding: 1rem;
+  }
 }
 
 @media screen and (max-width: 1024px) {

@@ -9,7 +9,7 @@ function renderCards(cards) {
     const cardElement = document.createElement('div');
     cardElement.classList.add('card');
     cardElement.innerHTML = `
-      <img src="${card.image}" alt="${card.title}" />
+      <img src="${card.image}" alt="${card.title}" loading="lazy" />
       <div class="card-info">
         <h3>${card.title}</h3>
         <p>${card.description}</p>
