@@ -1,6 +1,6 @@
 module.exports.service=[
     {
-        title: "Wedding / Engagement Photography",
+        title: "Wedding/ Engagement",
         icon: "💍",
         subtitle: "Capturing love, laughter, and happily ever after.",
         features: [
@@ -79,7 +79,7 @@ module.exports.service=[
         icon: "✈️",
         features: [
             "Location-based imagery", "Candid cultural captures",
-            , "Story-based photo essays",
+            , 
             "Couple/family travel photography","Drone coverage","Travel reels",
         ]
     },
