@@ -9,7 +9,11 @@
 ![Cloudinary](https://img.shields.io/badge/Cloudinary-Media%20Cloud-3448C5?style=flat-square&logo=cloudinary&logoColor=white)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)
 
-A professional **photo and videography studio website** built with Node.js, Express, and EJS. Maa Creation showcases portfolios, reels, and studio services with Cloudinary-powered media management and a contact form via Nodemailer.
+
+## 🏛️ About
+
+Maa Creation is a professional photo and videography studio based in Vadodara, Gujarat, dedicated to capturing life's most cherished moments with creativity and precision. From intimate portraits and wedding ceremonies to cinematic reels and creative shoots, we bring your vision to life through the art of visual storytelling. Every frame is crafted with passion, attention to detail, and a personal touch — because your memories deserve nothing less than the best.
+🌐 Live Website: mahakali-studio.onrender.com
 
 ---
 
