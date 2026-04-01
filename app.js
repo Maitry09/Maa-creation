@@ -29,6 +29,13 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.engine("ejs",ejsMate);
 
+app.get('/robots.txt', (req, res) => {
+  res.type('text/plain');
+  res.send(`User-agent: *
+Allow: /
+Sitemap: https://mahakali-studio.onrender.com/sitemap.xml`);
+});
+
 // Serve static files
 app.use(express.static(path.join(__dirname,"/public")));
 // Routes
@@ -124,8 +131,8 @@ app.post("/session",async(req, res) => {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'maitry2127@gmail.com',
-      pass: 'ocqpokasbxwjgbmm'
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS
     }})
 
     // Email content
@@ -221,13 +228,6 @@ app.get('/sitemap.xml', (req, res) => {
 
   res.header('Content-Type', 'application/xml');
   res.send(xml);
-});
-
-app.get('/robots.txt', (req, res) => {
-  res.type('text/plain');
-  res.send(`User-agent: *
-Allow: /
-Sitemap: https://mahakali-studio.onrender.com/sitemap.xml`);
 });
 
 app.listen(PORT, () => {
