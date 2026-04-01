@@ -223,7 +223,12 @@ app.get('/sitemap.xml', (req, res) => {
   res.send(xml);
 });
 
-
+app.get('/robots.txt', (req, res) => {
+  res.type('text/plain');
+  res.send(`User-agent: *
+Allow: /
+Sitemap: https://mahakali-studio.onrender.com/sitemap.xml`);
+});
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`)
