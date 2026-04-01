@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://mahakali-studio.onrender.com/sitemap.xml
