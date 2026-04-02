@@ -12,7 +12,7 @@
 
 ## 🏛️ About
 
-Maa Creation is a professional photo and videography studio based in Vadodara, Gujarat, dedicated to capturing life's most cherished moments with creativity and precision. From intimate portraits and wedding ceremonies to cinematic reels and creative shoots, we bring your vision to life through the art of visual storytelling. Every frame is crafted with passion, attention to detail, and a personal touch — because your memories deserve nothing less than the best.
+Maa Creation is a professional photo and videography studio based in Anand, Gujarat, dedicated to capturing life's most cherished moments with creativity and precision. From intimate portraits and wedding ceremonies to cinematic reels and creative shoots, we bring your vision to life through the art of visual storytelling. Every frame is crafted with passion, attention to detail, and a personal touch — because your memories deserve nothing less than the best.
 🌐 Live Website: mahakali-studio.onrender.com
 
 ---
@@ -152,4 +152,4 @@ Maa-creation/
 
 ## 📄 License
 
-This project is licensed under the [MIT License].
+This project is licensed under the MIT License.
