@@ -201,68 +201,6 @@ app.get('/category/:name', (req, res) => {
   });
   res.render('sections/category', { category, images, footer });
 });
-
-app.get('/sitemap.xml', (req, res) => {
-  const baseUrl = 'https://mahakali-studio.onrender.com';
-
-  const staticRoutes = [
-    '/',
-    '/about',
-    '/services',
-    '/portfolio',
-    '/reels',
-    '/contact'
-  ];
-
-  const portfolioCategories = [
-    'wedding',
-    'portrait',
-    'haldi',
-    'prewedding',
-    'mehndi'
-  ];
-
-  const reelIds = ['1', '2', '3', '4', '5', '6', '7'];
-
-  let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
-  xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
-
-  staticRoutes.forEach(route => {
-    xml += `
-      <url>
-        <loc>${baseUrl}${route}</loc>
-        <changefreq>weekly</changefreq>
-        <priority>${route === '/' ? '1.0' : '0.8'}</priority>
-      </url>\n`;
-  });
-
-  portfolioCategories.forEach(category => {
-    xml += `
-      <url>
-        <loc>${baseUrl}/portfolio/${category}</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-      </url>\n`;
-  });
-
-  reelIds.forEach(id => {
-    xml += `
-      <url>
-        <loc>${baseUrl}/reels/${id}</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-      </url>\n`;
-  });
-
-  xml += `</urlset>`;
-
-  res.set({
-    'Content-Type': 'application/xml',
-    'Cache-Control': 'public, max-age=3600'
-  });
-
-  res.status(200).send(xml);
-});
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`)
 })
